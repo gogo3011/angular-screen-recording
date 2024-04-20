@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "statsJson": true,
             "outputPath": "dist/angular-screen-recording",
             "index": "src/index.html",
             "browser": "src/main.ts",
