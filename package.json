@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --base-href https://gogo3011.github.io/angular-screen-recording/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "compodoc:build": "compodoc -p tsconfig.doc.json",
