@@ -5,6 +5,7 @@ An Angular Single Page Application written in a reactive way for screen recordin
 Privacy guaranteed. Works locally in your browser, no web requests, no data sharing.
 
 Recommended browser: Chrome / Edge / Opera
+
 Firefox doesn't support the Window: showOpenFilePicker() method.
 
 Check it out [here](https://gogo3011.github.io/angular-screen-recording/)
