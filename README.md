@@ -1,27 +1,34 @@
 # AngularScreenRecording
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+An Angular Single Page Application written in a reactive way for screen recording. Supports video and audio recording, exports in `.webm` format.
 
-## Development server
+Privacy guaranteed. Works locally in your browser, no web requests, no data sharing.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies used
+ - Typescript 5.4.2
+ - Angular 17.3.0
+ - RxJS 7.8.0
+ - PrimeNG/Prime Flex
+ - Local Storage as a quick JSON database
+ - Origin private file system (OPFS)/FileSystem API for storing/saving/exporting of the recorded videofiles
+ - MediaDevices API for capturing the devices screen
 
-## Code scaffolding
+## Documentation
+![documentation coverage](image.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Dev documentation done with JSDoc comments in the code. Browse here:  [Documentation](/documentation/)
 
-## Build
+## Workflow
+A user starts a recoring by pressing the recording button in the bottom right corner. This initializes a MediaDevices request for sharing a screen. The user can choose wherever to record his whole screen or a specific app/tab and if he needs system audio in the recording.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Recording can be stopped by either stopping the screenshare or pressing the recording button (now red) in the bottom right corner.
 
-## Running unit tests
+The recorded blobs get exported to a `webm` file in the OPFS and a JSON object containing metadata gets persisted in the clients local storage.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Past recordings can be previewed in the app and exported using the FileSystem API to a location in the clients filesystem with a press of a button.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Further reading
+ - [Origin private file system - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API/Origin_private_file_system)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ - [The origin private file system - Web.dev](https://web.dev/articles/origin-private-file-system)

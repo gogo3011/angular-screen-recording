@@ -1,0 +1,15 @@
+<div class="grid w-full px-8">
+    <div *ngFor="let recording of (recordings$ | async)" class="sm:col-12 md:col-3">
+        <p-card header="{{recording.title}}" subheader="{{recording.created | date}}">
+            <ng-template pTemplate="header">
+                <img alt="Card" [src]="recording.base64Thumbnail || '' | safeUrl"/>
+            </ng-template>
+            <ng-template pTemplate="footer">
+                <p-button class="px-2" label="Play" icon="pi pi-play" (click)="playRecording(recording)"></p-button>
+                <p-button class="px-2" label="Export" icon="pi pi-download" styleClass="ps-2x p-button-secondary" (click)="exportRecording(recording)"></p-button>
+            </ng-template>
+        </p-card>
+    </div>
+</div>
+<p-button severity="success" [hidden]="(ongoingRecording$ | async) === true" [rounded]="true" class="fab-btn" (click)="startRecording()" icon="pi pi-circle-fill"></p-button>
+<p-button severity="danger" [hidden]="(ongoingRecording$ | async) === false" [rounded]="true" class="fab-btn" (click)="stopRecording()" icon="pi pi-stop-circle"></p-button >\
