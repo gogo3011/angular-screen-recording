@@ -4,6 +4,11 @@ An Angular Single Page Application written in a reactive way for screen recordin
 
 Privacy guaranteed. Works locally in your browser, no web requests, no data sharing.
 
+Recommended browser: Chrome / Edge / Opera
+Firefox doesn't support the Window: showOpenFilePicker() method.
+
+Check it out [here](https://gogo3011.github.io/angular-screen-recording/)
+
 ## Technologies used
  - Typescript 5.4.2
  - Angular 17.3.0
@@ -16,7 +21,7 @@ Privacy guaranteed. Works locally in your browser, no web requests, no data shar
 ## Documentation
 ![documentation coverage](image.png)
 
-Dev documentation done with JSDoc comments in the code. Browse here:  [Documentation](/documentation/)
+Dev documentation done with JSDoc comments in the code. Browse here:  [Documentation](https://gogo3011.github.io/angular-screen-recording/documentation/)
 
 ## Workflow
 A user starts a recoring by pressing the recording button in the bottom right corner. This initializes a MediaDevices request for sharing a screen. The user can choose wherever to record his whole screen or a specific app/tab and if he needs system audio in the recording.
